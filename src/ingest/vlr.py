@@ -1,18 +1,3 @@
-"""
-VLR ingest with API-first adapter + scraper fallback.
-
-- First tries community API (vlrggapi.vercel.app).
-- If unavailable or incomplete, falls back to scraping the VLR match page.
-- Returns pandas DataFrames aligned with your schemas.
-
-Schemas:
-  matches_df: match_id, event, date, bo_format, team_a, team_b, vetoes_json, src_url
-  maps_df:    match_id, map_num, map_name, winner, score, picked_by, first_pick_order
-  player_maps_df:
-              match_id, map_num, date, player, team, opponent, map_name, agent,
-              kills, deaths, assists, ACS, rounds_played
-"""
-
 from __future__ import annotations
 import os, re, time, json, hashlib, argparse
 from datetime import datetime, timezone
