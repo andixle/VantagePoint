@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-from src.ingest.prizepicks import load_current_offers
+from src.ingest.prizepicks import load_current_offers_valorant as load_current_offers
 from src.ingest.vlr import load_player_maps, load_map_pool
 from src.features.engine import last15_features, head_to_head_over_rate, map_mixture_expectation
 
